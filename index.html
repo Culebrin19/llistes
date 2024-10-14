@@ -14,29 +14,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
 
 </head> 
+
+    <!-- Afegir, eliminar i modificar -->
+
 <body> 
     <ul id="llista">
         <li>Prova</li>
+        <li id="infolog">a</li>
     </ul>   
+    
+    <label for="fname">Afegeix element</label>
+    <input type="text" name="afegir" id="afegirElement">
+
     <button type="button" onclick="funcio()">Clica’m</button>
     <button type="button" onclick="esborrarLlista()">Esborrar Primer Element</button>
  <script>
-    function funcio(textToDisplay) {
-        let llista = document.getElementById("llista");
 
-        let nouElementLlista = document.createElement("li");
-        llista.append(nouElementLlista);
-        nouElementLlista.innerHTML = textToDisplay;
-    }
+        function funcio(textToDisplay) {
+            let llista = document.getElementById("llista");
 
-    function esborrarLlista(){
-        let llista = document.getElementById("llista");
+            let nouElementLlista = document.createElement("li");
+            llista.append(nouElementLlista);
+            nouElementLlista.innerHTML = textToDisplay;
+        }
 
-        llista.firstChild.remove();
-    }
-    funcio("M1")
-    funcio("M2")
-    funcio("M3")
+        console.log(document.getElementById("fname"));
+
+        document.getElementById("infolog").innerHTML = document.getElementById("afegirElement").value;
+
+        function esborrarLlista(){
+            let llista = document.getElementById("llista");
+
+            llista.firstChild.remove();
+        }
  </script>
 </body> 
 </html> 
