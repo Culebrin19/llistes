@@ -26,8 +26,9 @@
     <label for="fname">Afegeix element</label>
     <input type="text" name="afegir" id="afegirElement">
 
-    <button type="button" onclick="afegir()">Clica’m</button>
-    <button type="button" onclick="esborrarLlista()">Esborrar Primer Element</button>
+    <button type="button" onclick="afegir()">Afegir</button>
+    <button type="button" onclick="esborrarLlista()">Esborrar</button>
+    <button type="button" onclick="modificar()">Modificar</button>
  <script>
 
         function afegir(textToDisplay) {
@@ -46,6 +47,12 @@
             let llista = document.getElementById("llista");
 
             llista.firstChild.remove();
+        }
+
+        function modificar(){
+            let llista = document.getElementById("llista");
+
+            llista.firstChild.innerHTML = "Modificat";
         }
  </script>
 </body> 
