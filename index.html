@@ -25,9 +25,14 @@
     
     <label for="text">Text</label>
     <input type="text" id="afegir">
+    <button type="button" onclick="funcio()">Afegir</button><br><br>
 
-    <button type="button" onclick="funcio()">Afegir</button>
-    <button type="button" onclick="esborrarLlista()">Esborrar</button>
+    <label for="text">Posicio</label>
+    <input type="number" id="eliminar">
+    <button type="button" onclick="esborrarLlista()">Esborrar</button><br><br>
+
+    <label for="text">Text</label>
+    <input type="text" id="afegir">
     <button type="button" onclick="modificar()">Modificar</button>
 
  <script>
@@ -43,9 +48,10 @@
 
 
         function esborrarLlista(){
+            let posicio = document.getElementById("eliminar").value;
             let llista = document.getElementById("llista");
 
-            llista.firstChild.remove();
+            llista.children[posicio].remove();
         }
 
         function modificar(){
