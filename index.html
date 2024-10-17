@@ -23,25 +23,24 @@
         <li id="infolog">a</li>
     </ul>   
     
-    <label for="fname">Afegeix element</label>
-    <input type="text" name="afegir" id="afegirElement">
+    <label for="text">Text</label>
+    <input type="text" id="afegir">
 
     <button type="button" onclick="afegir()">Afegir</button>
     <button type="button" onclick="esborrarLlista()">Esborrar</button>
     <button type="button" onclick="modificar()">Modificar</button>
+
  <script>
+        function funcio() {
+        let textToDisplay = document.getElementById("afegir").value;
+        console.log(textToDisplay);
 
-        function afegir(textToDisplay) {
-            let llista = document.getElementById("llista");
+        let llista = document.getElementById("llista");
+        let nouElementLlista = document.createElement("li");
+        nouElementLlista.innerHTML = textToDisplay;
+        llista.append(nouElementLlista);
+    }
 
-            let nouElementLlista = document.createElement("li");
-            llista.append(nouElementLlista);
-            nouElementLlista.innerHTML = textToDisplay;
-        }
-
-        console.log(document.getElementById("fname"));
-
-        document.getElementById("infolog").innerHTML = document.getElementById("afegirElement").value;
 
         function esborrarLlista(){
             let llista = document.getElementById("llista");
