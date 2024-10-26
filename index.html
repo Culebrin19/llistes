@@ -39,7 +39,7 @@
         function esborrarLlista() {
             let posicio = document.getElementById("eliminar").value;
             let llista = document.getElementById("llista");
-            console.log(posicio);
+
             if (llista.children[posicio]){
                 llista.children[posicio].remove();
             } else{
@@ -49,11 +49,15 @@
         }
 
         function modificar() {
+            let posicio = document.getElementById("posicio").value;
+            let text = document.getElementById("nouText").value;
             let llista = document.getElementById("llista");
-            // llista.firstChild.innerHTML = "Modificat";
-            let modificar = document.getElementById("modificar");
-            
-            document.getElementsByName("li").innerHTML = modificar.value;
+
+            if (llista.children[posicio]){
+                llista.children[posicio].innerHTML= text;
+            } else{
+                console.log("No existeix la posicio");
+            }
         }
     </script>
 
@@ -72,7 +76,10 @@
     <button type="button" onclick="esborrarLlista()">Esborrar</button><br><br>
 
     <label for="text">Modificar</label>
-    <input type="text" id="modificar">
+    <input type="number" id="posicio" placeholder="Fica la posicio que vols modificar"><br><br>
+
+    <label for="text">Text a canviar</label>
+    <input type="text" id="nouText" placeholder="Fica el text per al qual vols canviar">
     <button type="button" onclick="functiomodificar()">Modificar</button>
 
     
