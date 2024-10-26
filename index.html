@@ -16,8 +16,11 @@
 
 </head>
 
-
-<!-- Afegir, eliminar i modificar -->
+<style>
+    input{
+        width: 14rem;
+    }
+</style>
 
 <body>
 
@@ -55,16 +58,17 @@
     </script>
 
     <ul id="llista">
-        <li>Prova</li>
-        <li id="infolog">a</li>
+        <li>Pera</li>
+        <li>Poma</li>
+        <li>Taronja</li>
     </ul>
-
+    
     <label for="text">Text</label>
     <input type="text" id="afegir">
     <button type="button" onclick="afegir()">Afegir</button><br><br>
 
     <label for="text">Posicio</label>
-    <input type="number" id="eliminar">
+    <input type="number" id="eliminar" placeholder="Fica la posicio que vols esborrar">
     <button type="button" onclick="esborrarLlista()">Esborrar</button><br><br>
 
     <label for="text">Modificar</label>
