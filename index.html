@@ -11,7 +11,7 @@
     <meta property="fb:admins" content="YourFacebookUsername" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <script src="/script.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 </head>
@@ -24,43 +24,6 @@
 
 <body>
 
-    <script>
-        function afegir() {
-            let textToDisplay = document.getElementById("afegir").value;
-            console.log(textToDisplay);
-
-            let llista = document.getElementById("llista");
-            let nouElementLlista = document.createElement("li");
-            nouElementLlista.innerHTML = textToDisplay;
-            llista.append(nouElementLlista);
-        }
-
-
-        function esborrarLlista() {
-            let posicio = document.getElementById("eliminar").value;
-            let llista = document.getElementById("llista");
-
-            if (llista.children[posicio]){
-                llista.children[posicio].remove();
-            } else{
-                console.log("No existeix");
-            }
-            
-        }
-
-        function modificar() {
-            let posicio = document.getElementById("posicio").value;
-            let text = document.getElementById("nouText").value;
-            let llista = document.getElementById("llista");
-
-            if (llista.children[posicio]){
-                llista.children[posicio].innerHTML= text;
-            } else{
-                console.log("No existeix la posicio");
-            }
-        }
-    </script>
-
     <ul id="llista">
         <li>Pera</li>
         <li>Poma</li>
@@ -68,7 +31,7 @@
     </ul>
     
     <label for="text">Text</label>
-    <input type="text" id="afegir">
+    <input type="text" id="afegir" placeholder="Fica la fruita que vols afegir">
     <button type="button" onclick="afegir()">Afegir</button><br><br>
 
     <label for="text">Posicio</label>
