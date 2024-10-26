@@ -1,0 +1,21 @@
+input{
+    width: 14rem;
+}
+
+body{
+    margin-left: 35rem;
+    margin-top: 15rem;
+}
+
+#llista{
+    margin-left: 4rem;
+    list-style-type: none;
+}
+
+#llista li{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    width: 10rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
